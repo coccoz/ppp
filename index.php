@@ -8,14 +8,44 @@
 <body>
     <ul>
         <?php
-            $N = 28;
-            echo "<h1>Divisori di $N</h1>";
-            
-            for ($i = 1; $i < $N; $i++) {
-                if ($N % $i == 0) {
-                    echo "<li>$i</li>";
-                }
+            $x = 15;
+            $y = 10;
+
+            if ($x > $y) 
+            {
+                $result = "maggiore";
+
+            } 
+            elseif ($x < $y) 
+            {
+                $result = "minore";
+            } 
+            else 
+            {
+                $result = "uguale";
             }
+
+            echo "<h1>$sx . è . $result . di . $y</h1>";
+
+            $max_value = max($x, $y);
+
+            if ($max_value < 10) 
+            {
+                echo "<p>$max_value minore di 10</p>";
+            } 
+            elseif ($max_value >= 10 && $max_value <= 20) 
+            {
+                echo "<p>$max_value compreso tra 10 e 20</p>";
+            } 
+            elseif ($max_value >= 21 && $max_value <= 30) 
+            {
+                echo "<p>$max_value compreso tra 21 e 30</p>";
+            } 
+            else 
+            {
+                echo "<p>$max_value maggiore di 30</p>";
+            }
+            
         ?>
     </ul>
 </body>
